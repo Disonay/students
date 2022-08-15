@@ -10,8 +10,6 @@ public class RowInfo {
     private final String middleName;
     private final Date birthdate;
     private final int course;
-
-    private final String sex;
     private final String subject;
 
     public RowInfo(String row) throws ParseException {
@@ -19,14 +17,9 @@ public class RowInfo {
         surname = data[0];
         name = data[1];
         middleName = data[2];
-        sex = data[3];
         birthdate = new SimpleDateFormat("dd.MM.yyyy").parse(data[4]);
         course = Integer.parseInt(data[5]);
         subject = data[6];
-    }
-
-    public String getSex() {
-        return sex;
     }
 
     public String getName() {
